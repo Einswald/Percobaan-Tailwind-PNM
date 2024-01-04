@@ -1,60 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>document</title>
-    <link href="./css/output.css" rel="stylesheet" />
-
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Website Berita</title>
 </head>
+
+<body class="font-sans bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-blue-200 fixed top-0 w-full z-50">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Politeknik Negeri Madiun</span>
+                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                        alt="">
+                </a>
+            </div>
+            <div class="flex lg:hidden">
+                <button type="button"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 hover:text-blue-500 focus:outline-none focus:ring focus:border-blue-300">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-12">
+
+                <div class="relative" onmouseover="toggleProductMenu(true)" onmouseout="toggleProductMenu(false)">
+                    <button type="button"
+                        class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+                        <span class="hover:text-blue-500">Berita</span>
+                        <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                            aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+
+                    <!-- Product flyout menu -->
+                    <div
+                        class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 product-menu transform transition-all ease-in-out duration-300 opacity-0 scale-y-0 origin-top bg-gray-100">
+                        <div class="p-4 space-y-2">
+                            <!-- item pada menu Berita -->
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-gray-700 hover:text-blue-500">Trending Topics</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-gray-700 hover:text-blue-500">Berita Lokal</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-gray-700 hover:text-blue-500">Berita Manca Negara</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500">Updates</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500">PartnerShip</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500">More About Us</a>
+            </div>
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500">Log in <span
+                        aria-hidden="true">&rarr;</span></a>
+            </div>
+        </nav>
+        <!-- Mobile menu -->
+        <div class="lg:hidden" role="dialog" aria-modal="true">
+            <!-- ... (sama dengan kode sebelumnya) -->
+        </div>
+    </header>
+
+    <!-- Konten Website -->
+    <!-- ... -->
+
+    <script>
+        function toggleProductMenu(show) {
+            const productMenu = document.querySelector('.product-menu');
+            if (show) {
+                productMenu.classList.remove('opacity-0', 'scale-y-0');
+                productMenu.classList.add('opacity-100', 'scale-y-100');
+            } else {
+                productMenu.classList.remove('opacity-100', 'scale-y-100');
+                productMenu.classList.add('opacity-0', 'scale-y-0');
+            }
+        }
+    </script>
+
+</body>
 <body>
-    <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
-        <div class="absolute inset-0 bg-[url(/img/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-        <div class="relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
-          <div class="mx-auto max-w-md">
-            <div class="divide-y divide-gray-300/50">
-              <div class="space-y-6 py-8 text-base leading-7 text-gray-600">
-                <p>An advanced online playground for Tailwind CSS, including support for things like:</p>
-                <ul class="space-y-4">
-                  <li class="flex items-center">
-                    <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="12" cy="12" r="11" />
-                      <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
-                    </svg>
-                    <p class="ml-4">
-                      Customizing your
-                      <code class="text-sm font-bold text-gray-900">tailwind.config.js</code> file
-                    </p>
-                  </li>
-                  <li class="flex items-center">
-                    <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="12" cy="12" r="11" />
-                      <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
-                    </svg>
-                    <p class="ml-4">
-                      Extracting classes with
-                      <code class="text-sm font-bold text-gray-900">@apply</code>
-                    </p>
-                  </li>
-                  <li class="flex items-center">
-                    <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="12" cy="12" r="11" />
-                      <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
-                    </svg>
-                    <p class="ml-4">Code completion with instant preview</p>
-                  </li>
-                </ul>
-                <p>Perfect for learning how the framework works, prototyping a new idea, or creating a demo to share online.</p>
-              </div>
-              <div class="pt-8 text-base font-semibold leading-7">
-                <p class="text-gray-900">Want to dig deeper into Tailwind?</p>
-                <p>
-                  <a href="https://tailwindcss.com/docs" class="text-sky-500 hover:text-sky-600">Read the docs &rarr;</a>
-                </p>
+    <div class="border border-red h-screen flex justify-center items-center">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-4">
+              <div class="bg-gray-200 p-4">
+                <img src="../image-1.jpeg" alt="">
+                <div class="p-3">
+                    <h2 class="text-xl">Produk 1</h2>
+                    <p class="text-gray-600">Deskripsi Produk 1</p>
+                </div>
               </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+</body>
+<body>
+    <div class="border border-red h-screen flex justify-center items-center">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-4">
+              <div class="bg-gray-200 p-4">
+                <img src="../image-1.jpeg" alt="">
+                <div class="p-3">
+                    <h2 class="text-xl">Produk 2</h2>
+                    <p class="text-gray-600">Deskripsi Produk 2</p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
