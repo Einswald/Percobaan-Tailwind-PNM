@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="img/Logo Politeknik Negeri Madiun.png" type="image/png">
     <title>Website Berita</title>
-    <link rel="icon" type="img/png" href="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-        sizes="32x32" />
 </head>
 
-<body class="font-sans bg-gray-100">
+<body class="font-sans bg-gray-100"> 
 
     <!-- Header -->
     <header class="bg-blue-200 fixed top-0 w-full z-50">
@@ -17,7 +17,7 @@
             <div class="flex lg:flex-1">
                 <a href="#" class="-m-1.5 p-1.5">
                     <span class="sr-only">Politeknik Negeri Madiun</span>
-                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                    <img class="h-8 w-auto" src="img/Logo Politeknik Negeri Madiun.png"
                         alt="">
                 </a>
             </div>
@@ -65,8 +65,33 @@
                 <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500">PartnerShip</a>
                 <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500">More About Us</a>
             </div>
-          </div>
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500">Log in <span
+                        aria-hidden="true">&rarr;</span></a>
+            </div>
+        </nav>
+        <!-- Mobile menu -->
+        <div class="lg:hidden" role="dialog" aria-modal="true">
+            <!-- ... (sama dengan kode sebelumnya) -->
         </div>
-      </div>
+    </header>
+
+    <!-- Konten Website -->
+    <!-- ... -->
+
+    <script>
+        function toggleProductMenu(show) {
+            const productMenu = document.querySelector('.product-menu');
+            if (show) {
+                productMenu.classList.remove('opacity-0', 'scale-y-0');
+                productMenu.classList.add('opacity-100', 'scale-y-100');
+            } else {
+                productMenu.classList.remove('opacity-100', 'scale-y-100');
+                productMenu.classList.add('opacity-0', 'scale-y-0');
+            }
+        }
+    </script>
+
 </body>
+
 </html>
