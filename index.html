@@ -7,21 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="icon" href="img/Logo Politeknik Negeri Madiun.png" type="image/png">
-    <title>Website Berita</title>
+    <title>PNews</title>
 </head>
 
-<body class="font-sans bg-gray-100"> 
+<body class="font-sans bg-gray-100">
 
     <!-- Header -->
     <header class="bg-blue-200 fixed top-0 w-full z-50">
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-            <div class="flex flex-row items-center gap-x-6">
-                <a href="#" class="-m-1.5 p-1.5 w-16"> <span class="sr-only">Politeknik Negeri Madiun</span>
-                    <img class="h-8 w-auto" src="img/Logo Politeknik Negeri Madiun.png"
-                        alt="">
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-2.0 p-1.5">
+                    <span class="sr-only">Politeknik Negeri Madiun</span>
+                    <img class="h-15 w-12" src="/img/Logo Politeknik Negeri Madiun.png" alt="">
+                    <div
+                        style="font: bold; display: flex; text-align: center;  padding: auto; padding: 0px; margin: 0 auto; width: 60px; ">
+                        <h1 class="hover:text-blue-500">PNews</h1>
+                    </div>
                 </a>
+
+
                 <!-- Search button -->
-                <form class="flex items-center gap-x-4">
+                <form class="search-bar flex items-center justify-between  gap-x-3">
                     <label for="default-search"
                         class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                     <div class="relative">
@@ -30,9 +36,13 @@
                             placeholder="Cari Berita Hari Ini" required>
                     </div>
                     <button type="submit"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all duration-500">Search</button>
                 </form>
+
             </div>
+
+
+
 
             <div class="flex lg:hidden">
                 <button type="button"
@@ -45,6 +55,7 @@
                     </svg>
                 </button>
             </div>
+
             <div class="hidden lg:flex lg:gap-x-12">
 
                 <div class="relative" onmouseover="toggleProductMenu(true)" onmouseout="toggleProductMenu(false)">
@@ -58,6 +69,7 @@
                                 clip-rule="evenodd" />
                         </svg>
                     </button>
+
 
                     <!-- Product flyout menu -->
                     <div
@@ -77,13 +89,19 @@
                     </div>
                 </div>
 
-                <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500">Updates</a>
-                <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500">PartnerShip</a>
-                <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500">More About Us</a>
+                <a href="#"
+                    class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500 transition-all duration-450">Hard
+                    News</a>
+                <a href="#"
+                    class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500 transition-all duration-450">PartnerShip</a>
+                <a href="#"
+                    class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500 transition-all duration-450">More
+                    About Us</a>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500">Log in <span
-                        aria-hidden="true">&rarr;</span></a>
+                <a href="#"
+                    class="text-sm font-semibold leading-6 text-gray-900 hover:text-green-500 transition-all duration-450">Log
+                    in <span aria-hidden="true">&rarr;</span></a>
             </div>
         </nav>
         <!-- Mobile menu -->
@@ -93,198 +111,215 @@
     </header>
 
     <!-- Konten Website -->
-     <!-- main -->
-     <main class="pt-32 bg-gray-100 pb-12">
-      <div class="container mx-auto px-4 flex flex-wrap lg:flex-nowrap">
-      
-          <!-- Main content -->
-          <div class="xl:w-10/12 lg:w-9/12 w-full  xl:ml-6 lg:mr-6">
-              <!-- big post -->
-              <div class="rounded-sm overflow-hidden bg-white shadow-sm">
-                  <a href="" class="block rounded-md overflow-hidden">
-                      <img src="img/Android WIth Github.png"
-                          class="w-full h-96 object-cover transform hover:scale-110 transition duration-500">
-                  </a>
-                  <div class="p-2 pb-4">
-                      <a href="#">
-                          <h2 class="block text-2xl font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
-                              Langkah-langkah Menghubungkan Android Studio Dengan GitHub
-                          </h2>
-                      </a>
-                      <div class="mt-2 flex space-x-4">
-                          <div class="flex text-gray-400 text-sm items-center">
-                              <span class="text-xs">
-                                  <i class="far fa-user"></i>
-                              </span>
-                              tutorial
-                          </div>
-                          <div class="flex text-gray-400 text-sm items-center">
-                              <span class="mr-2 text-xs">
-                                  <i class="far fa-clock"></i>
-                              </span>
-                              5 Januari 2024
-                          </div>
-                      </div>
-                  </div>
-              </div>
+    <!-- main -->
+    <main class="pt-32 bg-gray-100 pb-12">
+        <div class="container mx-auto px-4 flex flex-wrap lg:flex-nowrap">
 
-              <!-- regular post -->
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                  <div class="rounded-sm bg-white p-4 pb-5 shadow-sm">
-                      <a href="#" class="block rounded-md overflow-hidden">
-                          <img src="img/Android WIth Github.png"
-                              class="w-full h-60 object-cover transform hover:scale-110 transition duration-500">
-                      </a>
-                      <div class="mt-3">
-                          <a href="">
-                              <h2
-                                  class="block text-xl font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
-                                  Daftar Repository Lokal Indonesia untuk Debian 11
-                              </h2>
-                          </a>
-                          <div class="mt-2 flex space-x-3">
-                              <div class="flex text-gray-400 text-sm items-center">
-                                  <span class="text-xs">
-                                      <i class="far fa-user"></i>
-                                  </span>
-                                  info
-                              </div>
-                              <div class="flex text-gray-400 text-sm items-center">
-                                  <span class="mr-2 text-xs">
-                                      <i class="far fa-clock"></i>
-                                  </span>
-                                  5 Januari 2024
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="rounded-sm bg-white p-4 pb-5 shadow-sm">
-                      <a href="#" class="block rounded-md overflow-hidden">
-                          <img src="img/Android WIth Github.png"
-                              class="w-full h-60 object-cover transform hover:scale-110 transition duration-500">
-                      </a>
-                      <div class="mt-3">
-                          <a href="#">
-                              <h2
-                                  class="block text-xl font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
-                                  Cara Konfigurasi VirtualBox
-                              </h2>
-                          </a>
-                          <div class="mt-2 flex space-x-3">
-                              <div class="flex text-gray-400 text-sm items-center">
-                                  <span class="text-xs">
-                                      <i class="far fa-user"></i>
-                                  </span>
-                                  Tutorial
-                              </div>
-                              <div class="flex text-gray-400 text-sm items-center">
-                                  <span class="mr-2 text-xs">
-                                      <i class="far fa-clock"></i>
-                                  </span>
-                                  5 Januari 2024
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="rounded-sm bg-white p-4 pb-5 shadow-sm">
-                      <a href="#" class="block rounded-md overflow-hidden">
-                          <img src="img/Android WIth Github.png"
-                              class="w-full h-60 object-cover transform hover:scale-110 transition duration-500">
-                      </a>
-                      <div class="mt-3">
-                          <a href="#">
-                              <h2
-                                  class="block text-xl font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
-                                  Tutorial menggunakan tailwindCSS
-                              </h2>
-                          </a>
-                          <div class="mt-2 flex space-x-3">
-                              <div class="flex text-gray-400 text-sm items-center">
-                                  <span class="text-xs">
-                                      <i class="far fa-user"></i>
-                                  </span>
-                                  Blogging Tips
-                              </div>
-                              <div class="flex text-gray-400 text-sm items-center">
-                                  <span class="mr-2 text-xs">
-                                      <i class="far fa-clock"></i>
-                                  </span>
-                                  5 Januari 2024
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="rounded-sm bg-white p-4 pb-5 shadow-sm">
-                      <a href="#" class="block rounded-md overflow-hidden">
-                          <img src="img/Android WIth Github.png"
-                              class="w-full h-60 object-cover transform hover:scale-110 transition duration-500">
-                      </a>
-                      <div class="mt-2">
-                          <a href="#">
-                              <h2
-                                  class="block text-xl font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
-                                  Langkah Konfigurasi Debian 11 di VirtualBox
-                              </h2>
-                          </a>
-                          <div class="mt-2 flex space-x-3">
-                              <div class="flex text-gray-400 text-sm items-center">
-                                  <span class="text-xs">
-                                      <i class="far fa-user"></i>
-                                  </span>
-                                  Tutorial
-                              </div>
-                              <div class="flex text-gray-400 text-sm items-center">
-                                  <span class="mr-3 text-xs">
-                                      <i class="far fa-clock"></i>
-                                  </span>
-                                  5 Januari 2024
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+            <!-- Main content -->
+            <div class="xl:w-10/12 lg:w-9/12 w-full  xl:ml-6 lg:mr-6">
+                <!-- big post -->
+                <div class="rounded-sm overflow-hidden bg-white shadow-sm">
+                    <a href="" class="block rounded-md overflow-hidden">
+                        <img src="img/Android WIth Github.png"
+                            class="w-full h-96 object-cover transform hover:scale-110 transition duration-500">
+                    </a>
+                    <div class="p-2 pb-4">
+                        <a href="#">
+                            <h2
+                                class="block text-2xl font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
+                                Langkah-langkah Menghubungkan Android Studio Dengan GitHub
+                            </h2>
+                        </a>
+                        <div class="mt-2 flex space-x-4">
+                            <div class="flex text-gray-400 text-sm items-center">
+                                <span class="text-xs">
+                                    <i class="far fa-user"></i>
+                                </span>
+                                tutorial
+                            </div>
+                            <div class="flex text-gray-400 text-sm items-center">
+                                <span class="mr-2 text-xs">
+                                    <i class="far fa-clock"></i>
+                                </span>
+                                5 Januari 2024
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-          </div>
+                <!-- regular post -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                    <div class="rounded-sm bg-white p-4 pb-5 shadow-sm">
+                        <a href="#" class="block rounded-md overflow-hidden">
+                            <img src="img/Android WIth Github.png"
+                                class="w-full h-60 object-cover transform hover:scale-110 transition duration-500">
+                        </a>
+                        <div class="mt-3">
+                            <a href="">
+                                <h2
+                                    class="block text-xl font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
+                                    Daftar Repository Lokal Indonesia untuk Debian 11
+                                </h2>
+                            </a>
+                            <div class="mt-2 flex space-x-3">
+                                <div class="flex text-gray-400 text-sm items-center">
+                                    <span class="text-xs">
+                                        <i class="far fa-user"></i>
+                                    </span>
+                                    info
+                                </div>
+                                <div class="flex text-gray-400 text-sm items-center">
+                                    <span class="mr-2 text-xs">
+                                        <i class="far fa-clock"></i>
+                                    </span>
+                                    5 Januari 2024
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-sm bg-white p-4 pb-5 shadow-sm">
+                        <a href="#" class="block rounded-md overflow-hidden">
+                            <img src="img/Android WIth Github.png"
+                                class="w-full h-60 object-cover transform hover:scale-110 transition duration-500">
+                        </a>
+                        <div class="mt-3">
+                            <a href="#">
+                                <h2
+                                    class="block text-xl font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
+                                    Cara Konfigurasi VirtualBox
+                                </h2>
+                            </a>
+                            <div class="mt-2 flex space-x-3">
+                                <div class="flex text-gray-400 text-sm items-center">
+                                    <span class="text-xs">
+                                        <i class="far fa-user"></i>
+                                    </span>
+                                    Tutorial
+                                </div>
+                                <div class="flex text-gray-400 text-sm items-center">
+                                    <span class="mr-2 text-xs">
+                                        <i class="far fa-clock"></i>
+                                    </span>
+                                    5 Januari 2024
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-sm bg-white p-4 pb-5 shadow-sm">
+                        <a href="#" class="block rounded-md overflow-hidden">
+                            <img src="img/Android WIth Github.png"
+                                class="w-full h-60 object-cover transform hover:scale-110 transition duration-500">
+                        </a>
+                        <div class="mt-3">
+                            <a href="#">
+                                <h2
+                                    class="block text-xl font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
+                                    Tutorial menggunakan tailwindCSS
+                                </h2>
+                            </a>
+                            <div class="mt-2 flex space-x-3">
+                                <div class="flex text-gray-400 text-sm items-center">
+                                    <span class="text-xs">
+                                        <i class="far fa-user"></i>
+                                    </span>
+                                    Blogging Tips
+                                </div>
+                                <div class="flex text-gray-400 text-sm items-center">
+                                    <span class="mr-2 text-xs">
+                                        <i class="far fa-clock"></i>
+                                    </span>
+                                    5 Januari 2024
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-sm bg-white p-4 pb-5 shadow-sm">
+                        <a href="#" class="block rounded-md overflow-hidden">
+                            <img src="img/Android WIth Github.png"
+                                class="w-full h-60 object-cover transform hover:scale-110 transition duration-500">
+                        </a>
+                        <div class="mt-2">
+                            <a href="#">
+                                <h2
+                                    class="block text-xl font-semibold text-gray-700 hover:text-blue-500 transition font-roboto">
+                                    Langkah Konfigurasi Debian 11 di VirtualBox
+                                </h2>
+                            </a>
+                            <div class="mt-2 flex space-x-3">
+                                <div class="flex text-gray-400 text-sm items-center">
+                                    <span class="text-xs">
+                                        <i class="far fa-user"></i>
+                                    </span>
+                                    Tutorial
+                                </div>
+                                <div class="flex text-gray-400 text-sm items-center">
+                                    <span class="mr-3 text-xs">
+                                        <i class="far fa-clock"></i>
+                                    </span>
+                                    5 Januari 2024
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Popular posts -->
+              <div class="w-full mt-8 bg-white shadow-sm rounded-sm p-4 ">
+                <h3 class="text-xl font-semibold text-gray-700 mb-3 font-roboto">Popular Posts</h3>
+                <div class="space-y-4">
+                    <!-- konten 1 -->
+                    <a href="#" class="flex group">
+                        <div class="flex-shrink-0">
+                            <img src="img/Android WIth Github.png" class="h-14 w-20 lg:w-14 xl:w-20 rounded object-cover">
+                        </div>
+                        <div class="flex-grow pl-3">
+                            <h5
+                                class="text-md leading-5 block font-roboto font-semibold  transition group-hover:text-blue-500">
+                                Konfigurasi DNS Server di Debian 11 menggunakan virtualbox
+                            </h5>
+                            <div class="flex text-gray-400 text-sm items-center">
+                                <span class="text-xs"><i class="far fa-clock"></i></span>
+                                5 Januari 2024
+                            </div>
+                        </div>
+                    </a>
+                    <!-- konten 2 -->
+                    <a href="#" class="flex group">
+                        <div class="flex-shrink-0">
+                            <img src="img/Android WIth Github.png" class="h-14 w-20 lg:w-14 xl:w-20 rounded object-cover">
+                        </div>
+                        <div class="flex-grow pl-3">
+                            <h5
+                                class="text-md leading-5 block font-roboto font-semibold  transition group-hover:text-blue-500">
+                                Konfigurasi VPN Menggunakan Mikrotik
+                            </h5>
+                            <div class="flex text-gray-400 text-sm items-center">
+                                <span class="text-xs"><i class="far fa-clock"></i></span>
+                                5 Januari 2024
+                            </div>
+                        </div>
+                    </a>
+                    <!-- konten 3 -->
+                    <a href="#" class="flex group">
+                        <div class="flex-shrink-0">
+                            <img src="img/Android WIth Github.png" class="h-14 w-20 lg:w-14 xl:w-20 rounded object-cover">
+                        </div>
+                        <div class="flex-grow pl-3">
+                            <h5
+                                class="text-md leading-5 block font-roboto font-semibold  transition group-hover:text-blue-500">
+                                Logika Fuzzy
+                            </h5>
+                            <div class="flex text-gray-400 text-sm items-center">
+                                <span class="text-xs"><i class="far fa-clock"></i></span>
+                                5 Januari 2024
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
 
           <!-- right sidebar -->
-          <div class="lg:ml-auto lg:mt-0 lg:mr-10 z-40">
-
-            <div class="sticky top-0  bg-white">
-                <div class="max-w-sm rounded overflow-hidden shadow-lg  mt-0 ">
-                <img class="w-full" src="img/Android WIth Github.png" width="300" height="300" alt="pnm">
-                <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">Android to Github</div>
-                    <p class="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                    </p>
-                </div>
-                <div class="px-6 pt-4 pb-2">
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Android</span>
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Github</span>
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Project</span>
-                </div>
-                </div>
-            </div>
-
-            <div class=" relative top-0 bg-blue-300 mt-10">
-                <div class="max-w-sm rounded overflow-hidden shadow-lg mt-0 ">
-                <img class="w-full" src="img/Android WIth Github.png" width="300" height="300" alt="pnm">
-                <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">Android to Github</div>
-                    <p class="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                    </p>
-                </div>
-                <div class="px-6 pt-4 pb-2">
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Android</span>
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Github</span>
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Project</span>
-                </div>
-                </div>
-            </div>
-
-          </div>
-
+          
           <!-- right sidebar -->
       </div>
     </main>
@@ -304,6 +339,38 @@
 
     </script>
 
+</body>
+
+<body>
+    <div class="border border-red h-screen flex justify-center items-center">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-4">
+                <div class="bg-gray-200 p-4">
+                    <img src="../image-1.jpeg" alt="">
+                    <div class="p-3">
+                        <h2 class="text-xl">Produk 1</h2>
+                        <p class="text-gray-600">Deskripsi Produk 1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<body>
+    <div class="border border-red h-screen flex justify-center items-center">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-4">
+                <div class="bg-gray-200 p-4">
+                    <img src="../image-1.jpeg" alt="">
+                    <div class="p-3">
+                        <h2 class="text-xl">Produk 2</h2>
+                        <p class="text-gray-600">Deskripsi Produk 2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
