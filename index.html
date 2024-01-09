@@ -46,16 +46,16 @@
             <ul
                 class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-blue-200 w-full left-0 md:w-auto md:py-0 py-4 md: pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 ">
 
-                    <button type="button" 
-                        class="flex items-center gap-x-2 text-sm leading-6 text-gray-900 mx-4 my-4 md:my-0">
-                        <span class="text-xl hover:text-blue-500 duration-500">Berita</span>
-                        <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor"
-                            aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </button>
+                <button type="button"
+                    class="flex items-center gap-x-2 text-sm leading-6 text-gray-900 mx-4 my-4 md:my-0">
+                    <span class="text-xl hover:text-blue-500 duration-500">Berita</span>
+                    <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                        aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
                 <li class="mx-4 my-4 md:my-0">
                     <a href="#" class="text-xl hover:text-blue-500 duration-500">Updates</a>
                 </li>
@@ -67,16 +67,24 @@
                 </li>
                 <li class="mx-4 my-4 md:my-0">
                     <a href="#" class="text-sm hover:text-blue-500 duration-500">Log in <span
-                        aria-hidden="true">&rarr;</span></a>
+                            aria-hidden="true">&rarr;</span></a>
                 </li>
             </ul>
 
+            <script>
+                function Menu(e) {
+                    let list = document.querySelector('ul');
+
+                    e.name === 'menu' ? (e.name = "close", list.classList.
+                        add('top-[80px]'), list.classList.add('opacity-100')
+                    ) : (e.name = "menu", list.classList.remove('top-[80px]')
+                        , list.classList.remove('opacity-100'))
+                }
+            </script>
+
 
         </nav>
-        <!-- Mobile menu -->
-        <div class="lg:hidden" role="dialog" aria-modal="true">
-            <!-- ... (sama dengan kode sebelumnya) -->
-        </div>
+
     </header>
 
     <!-- Konten Website -->
@@ -295,29 +303,17 @@
             <!-- right sidebar -->
             <div class="lg:ml-auto lg:mt-0 lg:mr-10 z-40">
 
-                <div class="sticky top-0  bg-white">
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg  mt-0 ">
-                        <img class="w-full" src="img/Android WIth Github.png" width="300" height="300" alt="pnm">
-                        <div class="px-6 py-4">
-                            <div class="font-bold text-xl mb-2">Android to Github</div>
-                            <p class="text-gray-700 text-base">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
-                                Maiores et perferendis eaque, exercitationem praesentium nihil.
-                            </p>
-                        </div>
-                        <div class="px-6 pt-4 pb-2">
-                            <span
-                                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Android</span>
-                            <span
-                                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Github</span>
-                            <span
-                                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Project</span>
-                        </div>
+                <div class="text-sm py-6 " style="left: auto; width: 330px;">
+                    <div class="w-full text-center">
+                        <a class="uppercase" href="#">Advertisement</a>
+                        <a href="#">
+                            <img class="mx-auto" src="img/Android WIth Github.png" alt="advertisement area">
+                        </a>
                     </div>
                 </div>
 
-                <div class=" relative top-0 bg-blue-300 mt-10">
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg mt-0 ">
+                <div class="sticky top-0  bg-white">
+                    <div class="max-w-sm rounded overflow-hidden shadow-lg  mt-0 ">
                         <img class="w-full" src="img/Android WIth Github.png" width="300" height="300" alt="pnm">
                         <div class="px-6 py-4">
                             <div class="font-bold text-xl mb-2">Android to Github</div>
@@ -362,10 +358,15 @@
             <div class="grid md:grid-cols-5 grid-cols-3 gap-7">
                 <div>
                     <a href="/">
-                        <img class="h-10" src="poltek.png" alt="" />
+                        <img class="h-10" src="img/pnm.png" alt="" />
                     </a>
                     <p class="mt-6">
-                        website ini dibuat dengan cinta kasih dan sayang dari kita
+                    <div class="col-md-6">
+                        <p>PT. tibbiasasaja</p>
+                        <p>Jl. Serayu No. 84, Madiun</p>
+                        <p>0351-4627890</p>
+                        <p>sekretariat@pnm.ac.id</p>
+                    </div>
                     </p>
                 </div>
                 <div class="lg:col-span-2 md:col-span-4 col-span-3">
@@ -380,11 +381,11 @@
                             <a href="#"
                                 class="text-black-300 hover:text-black-400 transition-all duration-500 ease-in-out">
                                 Partner</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="text-black-300 hover:text-black-400 transition-all duration-500 ease-in-out">
-                                Location</a>
+                            <div class="col-md-6">
+                                <p>By:</p>
+                                <p>@pnmofficial</p>
+                                <p>@tibbiasasaja</p>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -393,9 +394,12 @@
                     <ul class="list-none space-y-2 flex justify-between">
                         <li class="flex space-x-4">
                             <a href="/">
-                                <img class="h-10 inline-block" src="instagram.png" alt="" />
-                                <img class="h-10 inline-block" src="email.png" alt="" />
-                                <img class="h-7 inline-block" src="telegram.png" alt="" />
+                                <img class="h-10 inline-block" src="img/instagram.png" alt="" />
+                                <p>@tibbiasasaja</p>
+                                <img class="h-10 inline-block" src="img/email.png" alt="" />
+                                <p>tibopnm2022@gmail.com</p>
+                                <img class="h-7 inline-block" src="img/telegram.png" alt="" />
+                                <p>08123456789</p>
                             </a>
                         </li>
                     </ul>
@@ -412,20 +416,7 @@
                     Politeknik Negeri Madiun
                 </p>
             </div>
+
         </div>
     </footer>
-
-    <script>
-        function Menu(e){
-            let list = document.querySelector('ul');
-
-            e.name === 'menu' ? (e.name = "close",list.classList.
-            add('top-[80px]') , list.classList.add('opacity-100')
-            ) :(e.name = "menu" ,list.classList.remove('top-[80px]')
-            ,list.classList.remove('opacity-100'))
-        }
-    </script>
-
 </body>
-
-</html>
