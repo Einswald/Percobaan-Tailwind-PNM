@@ -7,7 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="src/output.css" rel="stylesheet">
+
+    <!--~~~~~~~~~~~~~~~ Font Awesome ~~~~~~~~~~~~~~~-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="icon" href="img/Logo Politeknik Negeri Madiun.png" type="image/png">
     <title>Website Berita</title>
 </head>
@@ -15,17 +21,17 @@
 <body class="font-sans bg-gray-100">
 
     <!-- Header -->
-    <header class="bg-blue-200 fixed top-0 w-full z-50">
+    <header class="bg-blue-200 fixed top-0 left-0 w-full z-50">
         <nav class="max-w-7xl items-center justify-between p-6 lg:px-8 md:flex :items-center md:justify-between"
             aria-label="Global">
             <div class="flex justify-between items-center">
                 <a href="#" class="-m-1.5 p-1.5 w-16"> <span class="sr-only cursor-pointer">Politeknik Negeri
                         Madiun</span>
-                    <img class="h-8 w-auto transform hover:scale-150 transition duration-700"
+                    <img class="h-10 w-auto transform hover:scale-150 transition duration-700 gap-x-6"
                         src="img/Logo Politeknik Negeri Madiun.png" alt="">
                 </a>
                 <!-- Search button -->
-                <form class="flex items-center gap-x-4">
+                <form class="flex items-center gap-x-6">
                     <label for="default-search"
                         class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                     <div class="relative">
@@ -44,7 +50,7 @@
 
             <!-- Hamburger Menu-->
             <ul
-                class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-blue-200 w-full left-0 md:w-auto md:py-0 py-4 md: pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 ">
+                class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-blue-200 w-full left-0 md:w-auto md:py-0 py-4 md: pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 ">
 
                 <button type="button"
                     class="flex items-center gap-x-2 text-sm leading-6 text-gray-900 mx-4 my-4 md:my-0">
@@ -64,10 +70,6 @@
                 </li>
                 <li class="mx-4 my-4 md:my-0">
                     <a href="#" class="text-xl hover:text-blue-500 duration-500">About Us</a>
-                </li>
-                <li class="mx-4 my-4 md:my-0">
-                    <a href="#" class="text-sm hover:text-blue-500 duration-500">Log in <span
-                            aria-hidden="true">&rarr;</span></a>
                 </li>
             </ul>
 
@@ -238,7 +240,8 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Popular posts -->
+                </div>
+                <!-- Popular posts -->
                     <div class="w-full mt-8 bg-white shadow-sm rounded-sm p-4 ">
                         <h3 class="text-xl font-semibold text-gray-700 mb-3 font-roboto">Popular Posts</h3>
                         <div class="space-y-4">
@@ -295,7 +298,6 @@
                             </a>
                         </div>
                     </div>
-                </div>
             </div>
 
 
@@ -303,7 +305,7 @@
             <!-- right sidebar -->
             <div class="lg:ml-auto lg:mt-0 lg:mr-10 z-40">
 
-                <div class="text-sm py-6 " style="left: auto; width: 330px;">
+                <div class="text-sm py-6 " style="left: auto; width: 330px; ">
                     <div class="w-full text-center">
                         <a class="uppercase" href="#">Advertisement</a>
                         <a href="#">
@@ -312,7 +314,7 @@
                     </div>
                 </div>
 
-                <div class="sticky top-0  bg-white">
+                <div class="sticky top-52 bg-white">
                     <div class="max-w-sm rounded overflow-hidden shadow-lg  mt-0 ">
                         <img class="w-full" src="img/Android WIth Github.png" width="300" height="300" alt="pnm">
                         <div class="px-6 py-4">
@@ -370,7 +372,7 @@
                     </p>
                 </div>
                 <div class="lg:col-span-2 md:col-span-4 col-span-3">
-                    <h5 class="tracking-wide text-black-100 font-semibold">Company</h5>
+                    <h5 class="tracking-wide text-black-100 text-lg uppercase font-semibold">Company</h5>
                     <ul class="list-none mt-4 space-y-2">
                         <li>
                             <a href="#"
@@ -389,34 +391,42 @@
                         </li>
                     </ul>
                 </div>
-                <div class="lg:col-span-2 md:col-span-1 col-span-3 space-x-4 mt-4">
-                    <h5 class="tracking-wide text-black-100 font-semibold">Our Social Media</h5>
-                    <ul class="list-none space-y-2 flex justify-between">
-                        <li class="flex space-x-4">
-                            <a href="/">
-                                <img class="h-10 inline-block" src="img/instagram.png" alt="" />
-                                <p>@tibbiasasaja</p>
-                                <img class="h-10 inline-block" src="img/email.png" alt="" />
-                                <p>tibopnm2022@gmail.com</p>
-                                <img class="h-7 inline-block" src="img/telegram.png" alt="" />
-                                <p>08123456789</p>
-                            </a>
-                        </li>
-                    </ul>
+
+
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-lg uppercase font-semibold">SUPPORT</h3>
+                    <a href="" class="text-sm hover:text-red-700">FAQ's</a>
+                    <a href="" class="text-sm hover:text-red-700">Privacy Policy</a>
+                    <a href="" class="text-sm hover:text-red-700">Term & Condition</a>
+                    <a href="" class="text-sm hover:text-red-700">Contact</a>
+                </div>
+
+
+                <div class="space-y-2">
+                    <h3 class="text-lg uppercase font-semibold">follow us on</h3>
+
+                    <p class="flex items-center gap-2 text-base">
+                        <i class="fa-solid fa-brands fa-instagram text-lg text-secondaryColor"></i>
+                        @tibbiasasaja
+                    </p>
+                    <p class="flex items-center gap-2 text-base">
+                        <i class="fa-solid fa-solid fa-envelope text-lg text-secondaryColor"></i>
+                        tibopnm2022@gmail.com
+                    </p>
+                    <p class="flex items-center gap-2 text-base">
+                        <i class="fa-solid fa-solid fa-paper-plane text-lg text-secondaryColor"></i>
+                        +62 0876 3842 122
+                    </p>
+                    <p class="flex items-center gap-2 text-base">
+                        <i class="fa-solid fa-brands fa-square-twitter text-lg text-secondaryColor"></i>
+                        @tibbiasasaja
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="border-t border-slate-700">
-            <div class="md:text-left text-center container mx-auto py-7 px-6">
-                <p class="mb-0">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script>
-                    Politeknik Negeri Madiun
-                </p>
-            </div>
-
+        <div class="flex flex-col items-center border-t border-slate-700 py-6 px-6 md:flex-row md:justify-between">
+            <p class="paragraph">PNMNews</p>
+            <p class="paragraph">Copyright © 2024. All rights reserved.</p>
         </div>
     </footer>
 </body>
